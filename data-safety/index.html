@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Safety — QRPix</title>
+    <meta name="description" content="QRPix Data Safety — See exactly what data QRPix collects and how it protects your information.">
+    <style>
+        :root{--p:#5058C7;--pl:#7B83E0;--pd:#3D44A8;--pbg:#EEF0FF;--s:#FFFFFF;--bg:#F8FAFC;--t:#0F172A;--ts:#475569;--tt:#94A3B8;--b:#E2E8F0;--grn:#059669;--grnb:#ECFDF5;--grnbd:#A7F3D0;--blu:#1D4ED8;--blub:#EFF6FF;--blubd:#BFDBFE;--org:#C2410C;--orgb:#FFF7ED;--orgbd:#FED7AA;--r:16px}
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.75;color:var(--ts);background:var(--bg);-webkit-font-smoothing:antialiased}
+        .topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--b);padding:14px 0}
+        .topbar-in{max-width:860px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+        .topbar a.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+        .topbar .lt{font-size:18px;font-weight:700;color:var(--t);letter-spacing:-0.3px}
+        .nv{display:flex;gap:20px;align-items:center}
+        .nv a{font-size:14px;color:var(--tt);text-decoration:none;font-weight:500;transition:color .2s}
+        .nv a:hover,.nv a.ac{color:var(--p)}
+        .li{width:36px;height:36px;flex-shrink:0}
+        .ct{max-width:860px;margin:0 auto;padding:48px 24px 80px}
+        .hero{text-align:center;margin-bottom:56px;padding:48px 32px;background:linear-gradient(135deg,var(--pbg) 0%,#F0F0FF 50%,#FFF 100%);border-radius:24px;border:1px solid rgba(80,88,199,0.08)}
+        .hero .lw{display:inline-flex;align-items:center;gap:14px;margin-bottom:24px}
+        .hero .ll{width:56px;height:56px}
+        .hero .ltl{font-size:32px;font-weight:800;color:var(--p);letter-spacing:-0.8px}
+        .hero h1{font-size:36px;font-weight:800;color:var(--t);margin-bottom:10px;letter-spacing:-0.5px;line-height:1.2}
+        .hero .ed{color:var(--tt);font-size:15px;font-weight:500}
+        .sec{margin-bottom:40px;scroll-margin-top:80px}
+        h2{font-size:22px;font-weight:700;color:var(--t);margin:40px 0 16px;letter-spacing:-0.3px}
+        h3{font-size:17px;font-weight:650;color:#334155;margin:28px 0 12px}
+        p{margin-bottom:14px;font-size:16px}
+        ul{padding-left:24px;margin-bottom:16px}
+        li{margin-bottom:10px;font-size:16px}
+        li::marker{color:var(--pl)}
+        strong{color:var(--t);font-weight:600}
+        a{color:var(--p);text-decoration:none;font-weight:500;transition:color .2s}
+        a:hover{color:var(--pd);text-decoration:underline}
+        .co{padding:22px 24px;border-radius:var(--r);margin:28px 0;display:flex;gap:16px;align-items:flex-start}
+        .co-i{width:24px;height:24px;flex-shrink:0;margin-top:2px}
+        .co-b{flex:1}
+        .co-b strong{display:block;margin-bottom:4px;font-size:16px}
+        .co-b p{margin:0;font-size:15px;line-height:1.65}
+        .co-g{background:var(--grnb);border:1px solid var(--grnbd)}
+        .co-g .co-b strong{color:var(--grn)}
+        .co-g .co-b p{color:#065F46}
+        table{width:100%;border-collapse:separate;border-spacing:0;margin:24px 0;background:var(--s);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08);border:1px solid var(--b)}
+        th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--b);font-size:14px}
+        th{background:#F1F5F9;font-weight:650;color:var(--t);font-size:13px;text-transform:uppercase;letter-spacing:0.5px}
+        td{color:var(--ts)}
+        tr:last-child td{border-bottom:none}
+        tr:hover td{background:#FAFBFE}
+        .badge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:9999px;font-size:12px;font-weight:600}
+        .badge-green{background:var(--grnb);color:var(--grn)}
+        .badge-red{background:#FEE2E2;color:#991B1B}
+        .ck{color:var(--grn);font-weight:700;font-size:16px}
+        .xk{color:#DC2626;font-weight:700;font-size:16px}
+        footer{margin-top:48px;padding-top:24px;border-top:2px solid var(--b);text-align:center;color:var(--tt);font-size:14px}
+        footer .fl{display:flex;justify-content:center;gap:24px;margin-top:12px;flex-wrap:wrap}
+        footer a{color:var(--tt);font-weight:500}
+        footer a:hover{color:var(--p)}
+        @media(max-width:640px){.ct{padding:24px 16px 60px}.hero{padding:32px 20px}.hero h1{font-size:26px}.hero .ltl{font-size:26px}table{font-size:13px}th,td{padding:10px 10px}.nv{gap:12px}.nv a{font-size:13px}}
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-in">
+            <a href="/" class="logo">
+                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="96" height="96" rx="22" fill="#5058C7"/>
+  <rect x="18" y="18" width="24" height="24" rx="5" stroke="white" stroke-width="4" fill="none"/>
+  <rect x="26" y="26" width="8" height="8" rx="2" fill="white"/>
+  <rect x="58" y="18" width="24" height="24" rx="5" stroke="white" stroke-width="4" fill="none"/>
+  <rect x="66" y="26" width="8" height="8" rx="2" fill="white"/>
+  <rect x="18" y="58" width="24" height="24" rx="5" stroke="white" stroke-width="4" fill="none"/>
+  <rect x="26" y="66" width="8" height="8" rx="2" fill="white"/>
+  <rect x="46" y="26" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+  <rect x="46" y="34" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+  <rect x="46" y="42" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+  <rect x="26" y="46" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+  <rect x="34" y="46" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+  <rect x="58" y="58" width="28" height="28" rx="6" fill="white" opacity="0.5"/>
+  <path d="M62 78L70 66L76 74L80 69L84 78Z" fill="white"/>
+  <circle cx="72" cy="65" r="3" fill="white"/>
+</svg>
+                <span class="lt">QRPix</span>
+            </a>
+            <div class="nv">
+                <a href="/privacy-policy/">Privacy</a>
+                <a href="/terms-of-services/">Terms</a>
+                <a href="/data-safety/" class="ac">Data Safety</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ct">
+        <div class="hero">
+            <div class="lw">
+                <svg class="ll" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="96" height="96" rx="22" fill="#5058C7"/>
+                    <rect x="18" y="18" width="24" height="24" rx="5" stroke="white" stroke-width="4" fill="none"/>
+                    <rect x="26" y="26" width="8" height="8" rx="2" fill="white"/>
+                    <rect x="58" y="18" width="24" height="24" rx="5" stroke="white" stroke-width="4" fill="none"/>
+                    <rect x="66" y="26" width="8" height="8" rx="2" fill="white"/>
+                    <rect x="18" y="58" width="24" height="24" rx="5" stroke="white" stroke-width="4" fill="none"/>
+                    <rect x="26" y="66" width="8" height="8" rx="2" fill="white"/>
+                    <rect x="46" y="26" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+                    <rect x="46" y="34" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+                    <rect x="46" y="42" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+                    <rect x="26" y="46" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+                    <rect x="34" y="46" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+                    <rect x="58" y="58" width="28" height="28" rx="6" fill="white" opacity="0.5"/>
+                    <path d="M62 78L70 66L76 74L80 69L84 78Z" fill="white"/>
+                    <circle cx="72" cy="65" r="3" fill="white"/>
+                </svg>
+                <span class="ltl">QRPix</span>
+            </div>
+            <h1>Data Safety</h1>
+            <p class="ed">How QRPix handles your data &mdash; Last updated September 21, 2026</p>
+        </div>
+
+        <div class="co co-g">
+            <svg class="co-i" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="co-b">
+                <strong>Key Takeaway</strong>
+                <p>QRPix is a client-side app. Your scans, images, and generated QR codes never leave your device. The only data that leaves your device is anonymized ad delivery data handled by Google.</p>
+            </div>
+        </div>
+
+        <h2>Data Collection Overview</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Data Type</th>
+                    <th>Collected?</th>
+                    <th>Shared?</th>
+                    <th>Purpose</th>
+                    <th>Encryption</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Camera data</strong></td>
+                    <td><span class="xk">&#10007;</span> No</td>
+                    <td><span class="xk">&#10007;</span> No</td>
+                    <td>QR scanning (processed locally)</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><strong>Photos/Media</strong></td>
+                    <td><span class="xk">&#10007;</span> No</td>
+                    <td><span class="xk">&#10007;</span> No</td>
+                    <td>Logo in QR processing (local only)</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><strong>QR code content</strong></td>
+                    <td><span class="xk">&#10007;</span> No</td>
+                    <td><span class="xk">&#10007;</span> No</td>
+                    <td>Scan/generate (stored locally)</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><strong>Scan history</strong></td>
+                    <td><span class="xk">&#10007;</span> No</td>
+                    <td><span class="xk">&#10007;</span> No</td>
+                    <td>Local history feature</td>
+                    <td>Local SQLite</td>
+                </tr>
+                <tr>
+                    <td><strong>Wi-Fi credentials</strong></td>
+                    <td><span class="xk">&#10007;</span> No</td>
+                    <td><span class="xk">&#10007;</span> No</td>
+                    <td>Wi-Fi connection (processed locally)</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><strong>Advertising ID</strong></td>
+                    <td><span class="ck">&#10003;</span> Yes</td>
+                    <td><span class="ck">&#10003;</span> Yes (Google)</td>
+                    <td>Ad personalization</td>
+                    <td>TLS in transit</td>
+                </tr>
+                <tr>
+                    <td><strong>Device info</strong></td>
+                    <td><span class="ck">&#10003;</span> Yes</td>
+                    <td><span class="ck">&#10003;</span> Yes (Google)</td>
+                    <td>Ad delivery &amp; analytics</td>
+                    <td>TLS in transit</td>
+                </tr>
+                <tr>
+                    <td><strong>App interactions</strong></td>
+                    <td><span class="ck">&#10003;</span> Yes</td>
+                    <td><span class="ck">&#10003;</span> Yes (Google)</td>
+                    <td>Ad impression counting</td>
+                    <td>TLS in transit</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>How Your Data Is Protected</h2>
+
+        <h3>On-Device Processing</h3>
+        <ul>
+            <li>All QR scanning uses your device's camera directly — no video is recorded or uploaded</li>
+            <li>All image processing for "Logo in QR" happens in your device's memory</li>
+            <li>All QR code generation is performed locally</li>
+            <li>Scan history is stored in an encrypted SQLite database on your device</li>
+        </ul>
+
+        <h3>No Account Required</h3>
+        <ul>
+            <li>QRPix requires no sign-up, login, or account creation</li>
+            <li>No email, name, or personal identifiers are collected</li>
+            <li>No user profiles are created or maintained</li>
+        </ul>
+
+        <h3>Data You Control</h3>
+        <ul>
+            <li>You can clear all history at any time via Settings &gt; Clear All History</li>
+            <li>You can control whether scan history is saved via Settings &gt; Save Scan History</li>
+            <li>You can set auto-deletion periods (30, 60, 90, 180, 365 days, or Never)</li>
+            <li>Uninstalling the App permanently deletes all local data</li>
+        </ul>
+
+        <h2>Third-Party Data Sharing</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Third Party</th>
+                    <th>Data Shared</th>
+                    <th>Purpose</th>
+                    <th>Privacy Policy</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Google AdMob</strong></td>
+                    <td>Advertising ID, device info, app usage</td>
+                    <td>Ad delivery &amp; measurement</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Permissions We Request</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Permission</th>
+                    <th>Why We Need It</th>
+                    <th>Data Used</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Camera</strong></td>
+                    <td>Scan QR codes and barcodes in real-time</td>
+                    <td>Camera feed (not recorded)</td>
+                </tr>
+                <tr>
+                    <td><strong>Vibrate</strong></td>
+                    <td>Haptic feedback when QR code is detected</td>
+                    <td>None</td>
+                </tr>
+                <tr>
+                    <td><strong>Location</strong> <span class="badge badge-green">Optional</span></td>
+                    <td>Required by Android for Wi-Fi connection feature</td>
+                    <td>Not stored or shared</td>
+                </tr>
+                <tr>
+                    <td><strong>Nearby Wi-Fi</strong> <span class="badge badge-green">Optional</span></td>
+                    <td>Connect to Wi-Fi networks from QR codes</td>
+                    <td>Wi-Fi credentials (local only)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Children's Privacy</h2>
+        <p>QRPix does not knowingly collect data from children under 13. The App does not require account creation and does not collect personal information from any user.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Data Safety information periodically. Any changes will be reflected on this page with an updated date.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about data safety? Contact us at <a href="mailto:chaudaryglobal@gmail.com">chaudaryglobal@gmail.com</a></p>
+
+        <footer>
+            <p>&copy; 2026 QRPix. All rights reserved.</p>
+            <div class="fl">
+                <a href="/privacy-policy/">Privacy Policy</a>
+                <a href="/terms-of-services/">Terms of Service</a>
+                <a href="/data-safety/">Data Safety</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+

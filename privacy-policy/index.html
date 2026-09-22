@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — QRPix</title>
+    <meta name="description" content="QRPix Privacy Policy — Learn how QRPix protects your privacy with client-side processing and zero data collection.">
+    <style>
+        :root{--p:#5058C7;--pl:#7B83E0;--pd:#3D44A8;--pbg:#EEF0FF;--s:#FFFFFF;--bg:#F8FAFC;--t:#0F172A;--ts:#475569;--tt:#94A3B8;--b:#E2E8F0;--grn:#059669;--grnb:#ECFDF5;--grnbd:#A7F3D0;--blu:#1D4ED8;--blub:#EFF6FF;--blubd:#BFDBFE;--org:#C2410C;--orgb:#FFF7ED;--orgbd:#FED7AA;--r:16px}
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.75;color:var(--ts);background:var(--bg);-webkit-font-smoothing:antialiased}
+        .topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--b);padding:14px 0}
+        .topbar-in{max-width:860px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+        .topbar a.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+        .topbar .lt{font-size:18px;font-weight:700;color:var(--t);letter-spacing:-0.3px}
+        .nv{display:flex;gap:20px;align-items:center}
+        .nv a{font-size:14px;color:var(--tt);text-decoration:none;font-weight:500;transition:color .2s}
+        .nv a:hover,.nv a.ac{color:var(--p)}
+        .li{width:36px;height:36px;flex-shrink:0}
+        .ct{max-width:860px;margin:0 auto;padding:48px 24px 80px}
+        .hero{text-align:center;margin-bottom:56px;padding:48px 32px;background:linear-gradient(135deg,var(--pbg) 0%,#F0F0FF 50%,#FFF 100%);border-radius:24px;border:1px solid rgba(80,88,199,0.08)}
+        .hero .lw{display:inline-flex;align-items:center;gap:14px;margin-bottom:24px}
+        .hero .ll{width:56px;height:56px}
+        .hero .ltl{font-size:32px;font-weight:800;color:var(--p);letter-spacing:-0.8px}
+        .hero h1{font-size:36px;font-weight:800;color:var(--t);margin-bottom:10px;letter-spacing:-0.5px;line-height:1.2}
+        .hero .ed{color:var(--tt);font-size:15px;font-weight:500}
+        .toc{background:var(--s);border:1px solid var(--b);border-radius:var(--r);padding:24px 28px;margin-bottom:40px;box-shadow:0 1px 2px rgba(0,0,0,0.05)}
+        .toc-t{font-size:13px;font-weight:700;color:var(--tt);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+        .toc ul{list-style:none;padding:0;margin:0;columns:2;column-gap:32px}
+        .toc li{margin-bottom:6px;font-size:14px;break-inside:avoid}
+        .toc a{color:var(--ts);font-weight:450;display:flex;align-items:center;gap:8px}
+        .toc a::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--pl);flex-shrink:0}
+        .toc a:hover{color:var(--p);text-decoration:none}
+        .sec{margin-bottom:40px;scroll-margin-top:80px}
+        h2{font-size:22px;font-weight:700;color:var(--t);margin:40px 0 16px;letter-spacing:-0.3px}
+        h3{font-size:17px;font-weight:650;color:#334155;margin:28px 0 12px}
+        p{margin-bottom:14px;font-size:16px}
+        ul,ol{padding-left:24px;margin-bottom:16px}
+        li{margin-bottom:10px;font-size:16px}
+        li::marker{color:var(--pl)}
+        strong{color:var(--t);font-weight:600}
+        a{color:var(--p);text-decoration:none;font-weight:500;transition:color .2s}
+        a:hover{color:var(--pd);text-decoration:underline}
+        .co{padding:22px 24px;border-radius:var(--r);margin:28px 0;display:flex;gap:16px;align-items:flex-start}
+        .co-i{width:24px;height:24px;flex-shrink:0;margin-top:2px}
+        .co-b{flex:1}
+        .co-b strong{display:block;margin-bottom:4px;font-size:16px}
+        .co-b p{margin:0;font-size:15px;line-height:1.65}
+        .co-g{background:var(--grnb);border:1px solid var(--grnbd)}
+        .co-g .co-b strong{color:var(--grn)}
+        .co-g .co-b p{color:#065F46}
+        .co-bu{background:var(--blub);border:1px solid var(--blubd)}
+        .co-bu .co-b strong{color:var(--blu)}
+        .co-bu .co-b p{color:#1E3A5F}
+        .co-o{background:var(--orgb);border:1px solid var(--orgbd)}
+        .co-o .co-b strong{color:var(--org)}
+        .co-o .co-b p{color:#7C2D12}
+        footer{margin-top:48px;padding-top:24px;border-top:2px solid var(--b);text-align:center;color:var(--tt);font-size:14px}
+        footer .fl{display:flex;justify-content:center;gap:24px;margin-top:12px;flex-wrap:wrap}
+        footer a{color:var(--tt);font-weight:500}
+        footer a:hover{color:var(--p)}
+        @media(max-width:640px){.ct{padding:24px 16px 60px}.hero{padding:32px 20px}.hero h1{font-size:26px}.hero .ltl{font-size:26px}.toc ul{columns:1}.nv{gap:12px}.nv a{font-size:13px}}
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-in">
+            <a href="/" class="logo">
+                
+                <span class="lt">QRPix</span>
+            </a>
+            <div class="nv">
+                <a href="/privacy-policy/" class="ac">Privacy</a>
+                <a href="/terms-of-services/">Terms</a>
+                <a href="/data-safety/">Data Safety</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ct">
+        <div class="hero">
+            <div class="lw">
+                <svg class="ll" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="96" height="96" rx="22" fill="#5058C7"/>
+                    <rect x="18" y="18" width="24" height="24" rx="5" stroke="white" stroke-width="4" fill="none"/>
+                    <rect x="26" y="26" width="8" height="8" rx="2" fill="white"/>
+                    <rect x="58" y="18" width="24" height="24" rx="5" stroke="white" stroke-width="4" fill="none"/>
+                    <rect x="66" y="26" width="8" height="8" rx="2" fill="white"/>
+                    <rect x="18" y="58" width="24" height="24" rx="5" stroke="white" stroke-width="4" fill="none"/>
+                    <rect x="26" y="66" width="8" height="8" rx="2" fill="white"/>
+                    <rect x="46" y="26" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+                    <rect x="46" y="34" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+                    <rect x="46" y="42" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+                    <rect x="26" y="46" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+                    <rect x="34" y="46" width="4" height="4" rx="1" fill="white" opacity="0.6"/>
+                    <rect x="58" y="58" width="28" height="28" rx="6" fill="white" opacity="0.5"/>
+                    <path d="M62 78L70 66L76 74L80 69L84 78Z" fill="white"/>
+                    <circle cx="72" cy="65" r="3" fill="white"/>
+                </svg>
+                <span class="ltl">QRPix</span>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="ed">Effective Date: September 21, 2026</p>
+        </div>
+
+        <div class="toc">
+            <div class="toc-t">Table of Contents</div>
+            <ul>
+                <li><a href="#s1">1. Introduction</a></li>
+                <li><a href="#s2">2. Information We Collect</a></li>
+                <li><a href="#s3">3. How We Use Information</a></li>
+                <li><a href="#s4">4. Data Storage &amp; Security</a></li>
+                <li><a href="#s5">5. Camera Permission</a></li>
+                <li><a href="#s6">6. Location Permission</a></li>
+                <li><a href="#s7">7. Children's Privacy</a></li>
+                <li><a href="#s8">8. Third-Party Services</a></li>
+                <li><a href="#s9">9. Your Rights</a></li>
+                <li><a href="#s10">10. Changes to This Policy</a></li>
+                <li><a href="#s11">11. Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="co co-g">
+            <svg class="co-i" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div class="co-b">
+                <strong>Privacy First</strong>
+                <p>QRPix is designed as a client-side application. Your data stays on your device. We do not collect, transmit, or sell your personal information.</p>
+            </div>
+        </div>
+
+        <div class="sec" id="s1">
+            <h2>1. Introduction</h2>
+            <p>Welcome to QRPix ("we," "our," or "us"). This Privacy Policy explains how we handle information when you use our mobile application QRPix (the "App"). We are committed to protecting your privacy and being transparent about our practices.</p>
+            <p>By using QRPix, you agree to the collection and use of information as described in this policy. If you do not agree, please do not use the App.</p>
+        </div>
+
+        <div class="sec" id="s2">
+            <h2>2. Information We Collect</h2>
+            <h3>2.1 Information Processed Locally</h3>
+            <p>The following information is processed entirely on your device and is <strong>never transmitted</strong> to our servers or any third party:</p>
+            <ul>
+                <li><strong>Camera data</strong> — Camera feed used for QR code scanning is processed in real-time and is not recorded or stored.</li>
+                <li><strong>Images you select</strong> — Photos chosen for "Logo in QR" processing remain on your device.</li>
+                <li><strong>QR code content</strong> — URLs, text, Wi-Fi credentials, and other data from scanned or generated QR codes.</li>
+                <li><strong>Generated QR images</strong> — QR codes you create are stored locally on your device.</li>
+                <li><strong>Scan history</strong> — Records of your scans are stored in a local SQLite database on your device only.</li>
+            </ul>
+
+            <h3>2.2 Information Collected by Third-Party Services</h3>
+            <p>QRPix uses Google Mobile Ads for monetization. Google AdMob may collect:</p>
+            <ul>
+                <li><strong>Advertising ID</strong> — A unique, user-resettable identifier for ad personalization.</li>
+                <li><strong>Device information</strong> — Device model, operating system version, language settings.</li>
+                <li><strong>App usage data</strong> — Ad interaction data (impressions, clicks).</li>
+            </ul>
+            <p>This data is collected by Google and is subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. We do not have access to or control over this data.</p>
+        </div>
+
+        <div class="sec" id="s3">
+            <h2>3. How We Use Information</h2>
+            <p>Since QRPix is primarily a client-side app, we do not use your personal information for any purpose. The App processes all data locally on your device.</p>
+            <p>Third-party ad data is used by Google to serve relevant advertisements and is governed by Google's own policies.</p>
+        </div>
+
+        <div class="sec" id="s4">
+            <h2>4. Data Storage and Security</h2>
+            <ul>
+                <li><strong>Local storage only:</strong> All scan history, generated QR codes, and images are stored in your device's local storage using SQLite database and the application's private directory.</li>
+                <li><strong>No cloud storage:</strong> We do not upload or store any of your data on remote servers.</li>
+                <li><strong>Data deletion:</strong> You can delete your data at any time through Settings &gt; Clear All History. Uninstalling the App will also remove all local data.</li>
+                <li><strong>No encryption needed:</strong> Since data never leaves your device, no additional encryption is required for data in transit.</li>
+            </ul>
+        </div>
+
+        <div class="sec" id="s5">
+            <h2>5. Camera Permission</h2>
+            <p>QRPix requires camera permission to scan QR codes and barcodes. The camera feed is processed in real-time using on-device scanning technology. <strong>No images or video from the camera are recorded, stored, or transmitted.</strong></p>
+        </div>
+
+        <div class="sec" id="s6">
+            <h2>6. Location Permission</h2>
+            <p>QRPix may request location permission for Wi-Fi connection features. This permission is used solely to connect to Wi-Fi networks when you scan a Wi-Fi QR code and tap "Connect." <strong>Your location data is not stored or transmitted.</strong></p>
+        </div>
+
+        <div class="sec" id="s7">
+            <h2>7. Children's Privacy</h2>
+            <p>QRPix is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us immediately.</p>
+        </div>
+
+        <div class="sec" id="s8">
+            <h2>8. Third-Party Services</h2>
+            <p>QRPix uses the following third-party services:</p>
+            <ul>
+                <li><strong>Google AdMob</strong> — For displaying advertisements. <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Learn more</a></li>
+                <li><strong>Google Mobile Ads SDK</strong> — For ad mediation and delivery.</li>
+            </ul>
+            <p>Each third-party service has its own privacy policy governing the use of your information.</p>
+        </div>
+
+        <div class="sec" id="s9">
+            <h2>9. Your Rights</h2>
+            <p>Depending on your jurisdiction, you may have the following rights:</p>
+            <ul>
+                <li><strong>Right to access</strong> — View the data stored locally in the App.</li>
+                <li><strong>Right to deletion</strong> — Delete your data via Settings or by uninstalling the App.</li>
+                <li><strong>Right to opt-out</strong> — Opt out of personalized advertising through your device settings.</li>
+            </ul>
+        </div>
+
+        <div class="sec" id="s10">
+            <h2>10. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page with an updated effective date. You are advised to review this policy periodically.</p>
+        </div>
+
+        <div class="sec" id="s11">
+            <h2>11. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:chaudaryglobal@gmail.com">chaudaryglobal@gmail.com</a></li>
+                <li><strong>Website:</strong> <a href="https://qrpix.app/privacy">https://qrpix.app/privacy</a></li>
+            </ul>
+        </div>
+
+        <div class="co co-o">
+            <svg class="co-i" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div class="co-b">
+                <strong>Disclaimer</strong>
+                <p>This privacy policy applies to the QRPix mobile application. It does not apply to any third-party websites or services that may be accessed through links in QR codes generated or scanned using the App.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 QRPix. All rights reserved.</p>
+            <div class="fl">
+                <a href="/privacy-policy/">Privacy Policy</a>
+                <a href="/terms-of-services/">Terms of Service</a>
+                <a href="/data-safety/">Data Safety</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
